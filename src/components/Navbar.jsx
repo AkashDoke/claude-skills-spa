@@ -2,8 +2,23 @@ import { motion } from 'framer-motion';
 import { Sun, Moon, Zap } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
+/** Ordered labels matching the section indices in App.jsx. */
 const sections = ['Hero', 'Skills', 'Showcase', 'Workflow', 'Cases', 'Dashboard'];
 
+/**
+ * Fixed top navigation bar for the scroll-snap SPA.
+ *
+ * Reads `currentSection`, `isDark`, and `toggleTheme` from AppContext to
+ * highlight the active nav link and render the correct theme-toggle icon.
+ * Slides in from the top on mount via Framer Motion.
+ *
+ * @param {object}   props
+ * @param {function} props.scrollToSection - Callback that scrolls the page to
+ *   the section at the given index (0-based, matching the `sections` array).
+ *
+ * @example
+ * <Navbar scrollToSection={(i) => sectionRefs[i].current.scrollIntoView()} />
+ */
 export default function Navbar({ scrollToSection }) {
   const { isDark, toggleTheme, currentSection } = useApp();
 
