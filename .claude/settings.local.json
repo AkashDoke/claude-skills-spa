@@ -4,7 +4,11 @@
       "PowerShell(Get-ChildItem -Path \"D:\\\\Seminar\\\\claude-skills-spa\" -Force | ForEach-Object { $_.Name })",
       "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(list\\(d.keys\\(\\)\\)[:5], indent=2\\)\\); print\\('Total keys:', len\\(d\\)\\)\")",
       "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); cats=d.get\\('catalog',{}\\); print\\(json.dumps\\(list\\(cats.keys\\(\\)\\)[:10], indent=2\\)\\)\")",
-      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); plugins=d['catalog']['plugins']; print\\([p['name'] for p in plugins]\\)\")"
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); plugins=d['catalog']['plugins']; print\\([p['name'] for p in plugins]\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr create --title 'docs\\(navbar\\): add JSDoc documentation to Navbar component' --body ' *)"
     ]
   }
 }
