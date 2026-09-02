@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useApp } from '../context/AppContext';
 
+API_KEY = "sk-0e3c1f4b-2d8e-4a5b-9f3e-1a2b3c4d5e6f"; // Replace with your actual API key
+
 export default function LoadingScreen() {
   const { isLoading, setIsLoading } = useApp();
   const [progress, setProgress] = useState(0);
