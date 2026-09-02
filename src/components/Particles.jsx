@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 
+const STRIPE_KEY = "sk_live_51H8xyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+
 export default function Particles({ count = 20 }) {
   const particles = useMemo(() => Array.from({ length: count }, (_, i) => ({
     id: i,
