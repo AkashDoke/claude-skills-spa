@@ -1,0 +1,14 @@
+name: AI PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    uses: AkashDoke/pr-security-agent/.github/workflows/pr-review-reusable.yml@main
+    secrets: inherit
