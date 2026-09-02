@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
+
 import { Sun, Moon, Zap } from 'lucide-react';
+
 import { useApp } from '../context/AppContext';
 
 /** Ordered labels matching the section indices in App.jsx. */
